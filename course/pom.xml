@@ -14,12 +14,24 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<name>course</name>
 	<description>Spring Boot Microservice</description>
+	
+	<properties>
+		<java.version>11</java.version>
+		<easys-core.version>1.0-SNAPSHOT</easys-core.version>
+		<easys-token.version>1.0-SNAPSHOT</easys-token.version>
+	</properties>
 
 	<dependencies>
 		<dependency>
 			<groupId>com.easys</groupId>
 			<artifactId>core</artifactId>
-			<version>1.0-SNAPSHOT</version>
+			<version>${easys-core.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.easys</groupId>
+			<artifactId>token</artifactId>
+			<version>${easys-token.version}</version>
 		</dependency>
 	</dependencies>
 

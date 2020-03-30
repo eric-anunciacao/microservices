@@ -7,6 +7,8 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.validation.constraints.NotNull;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
+
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.EqualsAndHashCode;
@@ -23,6 +25,7 @@ import lombok.ToString;
 @AllArgsConstructor
 @ToString
 @EqualsAndHashCode(onlyExplicitlyIncluded = true)
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class ApplicationUser implements AbstractEntity {
 
 	private static final long serialVersionUID = 2913186691617722922L;
@@ -43,6 +46,7 @@ public class ApplicationUser implements AbstractEntity {
 
 	@NotNull(message = "The filed 'role' is mandatory")
 	@Column(nullable = false)
+	@Builder.Default
 	private String role = "USER";
 
 	public ApplicationUser(@NotNull ApplicationUser applicationUser) {

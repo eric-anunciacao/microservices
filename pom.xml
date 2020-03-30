@@ -17,7 +17,7 @@
 	<properties>
 		<java.version>11</java.version>
 		<spring-cloud.version>Hoxton.SR1</spring-cloud.version>
-		<nimbus-jose.version>7.0</nimbus-jose.version>
+		<nimbus-jose.version>7.9</nimbus-jose.version>
 		<commons-lang3.version>3.8.1</commons-lang3.version>
 	</properties>
 
